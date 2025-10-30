@@ -14,7 +14,7 @@ app.listen(port,()=>{
 const mongoose = require("mongoose");
  const connectDB = async () => {
     try {
-      await mongoose.connect("");
+      await mongoose.connect("mongodb+srv://deepumelkani123_db_user:PrepNinja@cluster0.rxrktri.mongodb.net/?appName=Cluster0");
       console.log("Database connected successfully");
     } catch (error) {
       console.error("Error connecting to database:", error);
