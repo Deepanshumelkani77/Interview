@@ -5,9 +5,9 @@ import Home from './pages/Home.jsx'
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen w-full bg-gray-50">
       <Navbar />
-      <main className="max-w-7xl mx-auto px-6 py-8 pt-24">
+      <main className="w-full mx-auto px-6 py-8 pt-24">
         <Routes>
           <Route path='/' element={<Home/>}/>
         </Routes>
