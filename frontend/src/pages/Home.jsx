@@ -1,10 +1,12 @@
 import React from 'react'
 import Header from '../components/Header'
+import JobProfile from '../components/JobProfile'
 
 const Home = () => {
   return (
     <div className="bg-black">
       <Header />
+    
       
       {/* Features Section */}
       <section className="relative bg-black py-20 px-4 sm:px-6 lg:px-20 overflow-hidden">
@@ -110,7 +112,7 @@ const Home = () => {
         <div className="max-w-8xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
-              How It <span className="text-[#7415FD]">Works</span>
+              How It <span className="text-[#00CC79] ">Works</span>
             </h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Get started in minutes with just 3 simple steps
@@ -165,6 +167,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+      <JobProfile />
 
       {/* Testimonials Section */}
       <section className="bg-black py-20 px-4 sm:px-6 lg:px-20">
