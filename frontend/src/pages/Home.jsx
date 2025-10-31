@@ -172,11 +172,11 @@ const Home = () => {
       <JobProfile />
 
       {/* Testimonials Section */}
-      <section className="bg-black py-20 px-4 sm:px-6 lg:px-20">
+      <section className="bg-black pb-10 px-4 sm:px-6 lg:px-20">
         <div className="max-w-8xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
-              What Our <span className="text-[#F447EF]">Users Say</span>
+              What Our <span className="text-[#00CC79]">Users Say</span>
             </h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Join thousands who landed their dream jobs
@@ -241,27 +241,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-black py-20 px-4 sm:px-6 lg:px-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-3xl p-12 lg:p-16 border border-zinc-700 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#7415FD]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#F447EF]/10 rounded-full blur-3xl"></div>
-            
-            <div className="relative text-center">
-              <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Ready to Ace Your Interview?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 50,000+ professionals already using PrepNinja</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-[#7415FD] to-purple-600 text-white px-10 py-5 rounded-xl font-bold text-lg shadow-2xl hover:scale-105 transition-all">
-                  Start Free Trial Now
-                </button>
-                <button className="bg-white/10 text-white px-10 py-5 rounded-xl font-bold text-lg border-2 border-white/20 hover:bg-white/20 transition-all">View Pricing</button>
-              </div>
-              <p className="text-gray-400 text-sm mt-6">No credit card required • 7-day free trial</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  
 
     
     </div>

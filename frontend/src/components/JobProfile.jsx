@@ -24,7 +24,7 @@ const jobProfiles = [
 ]
 
   return (
-    <section className="relative bg-black py-20 overflow-hidden">
+    <section className="relative bg-black  py-20 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-10 w-80 h-80 bg-[#7415FD]/5 rounded-full blur-3xl"></div>
@@ -46,13 +46,13 @@ const jobProfiles = [
         </div>
 
         {/* Infinite Scrolling Animation Container */}
-        <div className="relative">
+        <div className="relative max-w-8xl">
           {/* Gradient overlays for fade effect */}
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
           
           {/* Scrolling container */}
-          <div className="flex overflow-hidden">
+          <div className="flex overflow-hidden max-w-8xl">
             {/* Combined scrolling wrapper */}
             <div className="flex animate-scroll-left space-x-0">
               {/* First set of cards */}
@@ -65,7 +65,7 @@ const jobProfiles = [
                         <img 
                           src={profile.img} 
                           alt={profile.title} 
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" 
                         />
                       )}
                     </div>
@@ -103,7 +103,7 @@ const jobProfiles = [
                         <img 
                           src={profile.img} 
                           alt={profile.title} 
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" 
                         />
                       )}
                     </div>
