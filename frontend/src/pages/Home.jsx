@@ -1,12 +1,10 @@
 import React from 'react'
-import Image from '../components/Image.jsx'
+import Image from '../components/Image'
 
 const Home = () => {
   return (
     <div>
-      
-<Image/>
-
+      <Image />
     </div>
   )
 }
