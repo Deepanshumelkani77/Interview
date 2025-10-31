@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3 cursor-pointer group">
           {/* Attractive Icon with Gradient */}
           <div className="relative">
-            <div className="w-11 h-11 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-300 shadow-lg shadow-indigo-500/50 group-hover:shadow-indigo-400/70">
+            <div className="w-11 h-11 bg-gradient-to-br from-[#C596FD] via-purple-500 to-indigo-600 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-300 shadow-lg shadow-purple-400/50 group-hover:shadow-[#C596FD]/70">
               <svg 
                 className="w-6 h-6 text-white" 
                 viewBox="0 0 24 24" 
@@ -29,7 +29,7 @@ const Navbar = () => {
           </div>
           {/* Logo Text with Gradient */}
           <div className="text-2xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#C596FD] via-purple-400 to-indigo-400 bg-clip-text text-transparent">
               Prep
             </span>
             <span className="text-white ml-0.5">
@@ -40,10 +40,10 @@ const Navbar = () => {
         
         {/* Profile Icon - Right Side */}
         <div className="flex items-center">
-          <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
+          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors cursor-pointer">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-6 w-6 text-white" 
+              className="h-6 w-6 text-black" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
