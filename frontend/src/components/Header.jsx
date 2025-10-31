@@ -27,10 +27,10 @@ const Header = () => {
 
       {/* Main Content */}
       <div className="relative  z-10 max-w-8xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16 lg:px-20 w-full">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content */}
-          <div className=" bg-green-200 space-y-8 text-center lg:text-left animate-[fadeIn_1s_ease-in]">
+          <div className="  space-y-8 text-center lg:text-left animate-[fadeIn_1s_ease-in]">
             {/* Badge with animation */}
             <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-[slideDown_0.8s_ease-out]">
               <span className="text-2xl animate-bounce" style={{ animationDuration: '2s' }}>🤖</span>
@@ -39,21 +39,21 @@ const Header = () => {
 
             {/* Main Heading with stagger animation */}
             <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight">
-              <span className="inline-block text-white drop-shadow-lg animate-[slideInLeft_0.6s_ease-out] hover:scale-105 transition-transform">Ace Your</span>
+              <span className="inline-block text-green-600 drop-shadow-lg animate-[slideInLeft_0.6s_ease-out] hover:scale-105 transition-transform">Ace Your</span>
               <br />
-              <span className="inline-block text-purple-900 animate-[slideInLeft_0.8s_ease-out] hover:scale-105 transition-transform">Dream Job</span>
+              <span className="inline-block text-purple-900 animate-[slideInLeft_0.8s_ease-out] hover:scale-105 transition-transform">Dream Job Interview</span>
               <br />
-              <span className="inline-block bg-gradient-to-r from-indigo-600 to-purple-900 bg-clip-text text-transparent animate-[slideInLeft_1s_ease-out] hover:scale-110 transition-transform">Interview</span>
+             
             </h1>
 
             {/* Description with fade in */}
-            <p className="text-lg lg:text-xl text-black font-medium max-w-xl animate-[fadeIn_1.2s_ease-in] hover:text-purple-900 transition-colors duration-300">
+            <p className="text-lg lg:text-xl text-black font-medium  animate-[fadeIn_1.2s_ease-in] hover:text-purple-900 transition-colors duration-300">
               Master your interview skills with our AI-powered mock interviews. 
               Get real-time feedback, personalized coaching, and confidence to succeed.
             </p>
 
             {/* CTA Buttons with animations */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-[slideUp_1s_ease-out]">
+            <div className="flex flex-col sm:flex-row gap-4 lg:gap-20 justify-center lg:justify-start animate-[slideUp_1s_ease-out]">
               <button className="group bg-white text-purple-900 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 hover:bg-purple-50 animate-[pulse_2s_ease-in-out_infinite]">
                 <span className="group-hover:animate-pulse">Start Free Trial</span>
                 <svg className="w-5 h-5 group-hover:translate-x-2 group-hover:scale-125 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,7 +66,7 @@ const Header = () => {
             </div>
 
             {/* Trust Indicators with hover animations */}
-            <div className="flex flex-wrap items-center gap-8 justify-center lg:justify-start pt-4 animate-[fadeIn_1.5s_ease-in]">
+            <div className="flex flex-wrap items-center gap-8 lg:gap-20 justify-center lg:justify-start pt-4 animate-[fadeIn_1.5s_ease-in]">
               <div className="text-center group cursor-pointer transform hover:scale-110 transition-all duration-300">
                 <div className="text-5xl font-black text-black group-hover:text-purple-900 transition-colors animate-[countUp_2s_ease-out]">50K+</div>
                 <div className="text-xl text-black font-medium group-hover:text-purple-800 transition-colors">Users</div>
@@ -83,12 +83,12 @@ const Header = () => {
           </div>
 
           {/* Right Side - Image Gallery with Animations */}
-          <div className=" bg-pink-200 relative flex justify-center lg:justify-center animate-[slideInRight_1s_ease-out]">
-            <div className="relative w-full max-w-lg h-[500px]">
+          <div className=" relative flex justify-center lg:justify-center animate-[slideInRight_1s_ease-out]">
+            <div className=" relative w-[90%] h-[600px]">
               
               {/* Center Main Image */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 group">
-                <div className="w-80 h-80 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-3xl shadow-2xl overflow-hidden border-4 border-white hover:border-purple-300 transition-all duration-500 hover:shadow-[0_25px_60px_rgba(139,92,246,0.4)] hover:scale-110 hover:rotate-3 transform">
+                <div className="lg:w-80 lg:h-80 w-50 h-50 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-3xl shadow-2xl overflow-hidden border-4 border-white hover:border-purple-300 transition-all duration-500 hover:shadow-[0_25px_60px_rgba(139,92,246,0.4)] hover:scale-110 hover:rotate-3 transform">
                   <img 
                     src={a} 
                     alt="Interview 1" 
@@ -99,7 +99,7 @@ const Header = () => {
 
               {/* Floating Image 1 - Top Left */}
               <div className="absolute top-0 left-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite' }}>
-                <div className="w-50 h-50 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-6 transition-all duration-500 cursor-pointer">
+                <div className="lg:w-60 lg:h-60 w-32 h-32 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-6 transition-all duration-500 cursor-pointer">
                   <img 
                     src={b} 
                     alt="Interview 2" 
@@ -110,7 +110,7 @@ const Header = () => {
 
               {/* Floating Image 2 - Top Right */}
               <div className="absolute top-8 right-4 z-20 animate-[float_5s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}>
-                <div className="w-50 h-50 rounded-full shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-12 transition-all duration-500 cursor-pointer">
+                <div className="lg:w-60 lg:h-60 w-32 h-32 rounded-full shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-12 transition-all duration-500 cursor-pointer">
                   <img 
                     src={c} 
                     alt="Interview 3" 
@@ -121,7 +121,7 @@ const Header = () => {
 
               {/* Floating Image 3 - Bottom Left */}
               <div className="absolute bottom-4 left-8 z-20 animate-[float_7s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 7s ease-in-out infinite', animationDelay: '2s' }}>
-                <div className="w-50 h-50 rounded-xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-6 transition-all duration-500 cursor-pointer bg-gradient-to-br from-blue-400 to-purple-500 p-1">
+                <div className="lg:w-60 lg:h-60 w-32 h-32 rounded-xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-6 transition-all duration-500 cursor-pointer bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                   <img 
                     src={d} 
                     alt="Interview 4" 
@@ -132,7 +132,7 @@ const Header = () => {
 
               {/* Floating Image 4 - Bottom Right */}
               <div className="absolute bottom-8 right-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite', animationDelay: '3s' }}>
-                <div className="w-50 h-50 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-12 transition-all duration-500 cursor-pointer">
+                <div className="lg:w-60 lg:h-60 w-32 h-32 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-12 transition-all duration-500 cursor-pointer">
                   <img 
                     src={e} 
                     alt="Interview 5" 
