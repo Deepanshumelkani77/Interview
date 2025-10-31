@@ -7,7 +7,7 @@ const Header = () => {
 
 
   return (
-    <div className="relative w-full h-auto min-h-[90vh] md:h-[80vh] bg-white  overflow-hidden flex items-center pt-5">
+    <div className="relative w-full h-auto min-h-[90vh] md:h-[80vh] bg-black  overflow-hidden flex items-center pt-5">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Floating Circles with different animations */}
@@ -39,28 +39,28 @@ const Header = () => {
 
             {/* Main Heading with stagger animation */}
             <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight">
-              <span className="inline-block text-green-600 drop-shadow-lg animate-[slideInLeft_0.6s_ease-out] hover:scale-105 transition-transform">Ace Your</span>
+              <span className="inline-block text-white drop-shadow-lg animate-[slideInLeft_0.6s_ease-out] hover:scale-105 transition-transform">Ace Your</span>
               <br />
-              <span className="inline-block text-purple-900 animate-[slideInLeft_0.8s_ease-out] hover:scale-105 transition-transform">Dream Job Interview</span>
+              <span className="inline-block text-[#00CC79] animate-[slideInLeft_0.8s_ease-out] hover:scale-105 transition-transform">Dream Job Interview</span>
               <br />
              
             </h1>
 
             {/* Description with fade in */}
-            <p className="text-lg lg:text-xl text-black font-medium  animate-[fadeIn_1.2s_ease-in] hover:text-purple-900 transition-colors duration-300">
+            <p className="text-lg lg:text-xl text-white font-medium  animate-[fadeIn_1.2s_ease-in] hover:text-purple-900 transition-colors duration-300">
               Master your interview skills with our AI-powered mock interviews. 
               Get real-time feedback, personalized coaching, and confidence to succeed.
             </p>
 
             {/* CTA Buttons with animations */}
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-20 justify-center lg:justify-start animate-[slideUp_1s_ease-out]">
-              <button className="group bg-white text-purple-900 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 hover:bg-purple-50 animate-[pulse_2s_ease-in-out_infinite]">
+              <button className="group bg-[#7415FD] text-black px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 hover:bg-purple-50 ">
                 <span className="group-hover:animate-pulse">Start Free Trial</span>
                 <svg className="w-5 h-5 group-hover:translate-x-2 group-hover:scale-125 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </button>
-              <button className="bg-purple-900/20 backdrop-blur-sm text-purple-900 px-8 py-4 rounded-xl font-bold text-lg border-2 border-purple-900/30 hover:bg-purple-900/30 hover:border-purple-900/50 hover:scale-105 transition-all duration-300 hover:shadow-lg">
+              <button className="bg-[#F447EF] backdrop-blur-sm text-black px-8 py-4 rounded-xl font-bold text-lg border-2 border-purple-900/30 hover:bg-purple-900/30 hover:border-purple-900/50 hover:scale-105 transition-all duration-300 hover:shadow-lg">
                 Watch Demo
               </button>
             </div>
@@ -68,16 +68,16 @@ const Header = () => {
             {/* Trust Indicators with hover animations */}
             <div className="flex flex-wrap items-center gap-8 lg:gap-20 justify-center lg:justify-start pt-4 animate-[fadeIn_1.5s_ease-in]">
               <div className="text-center group cursor-pointer transform hover:scale-110 transition-all duration-300">
-                <div className="text-5xl font-black text-black group-hover:text-purple-900 transition-colors animate-[countUp_2s_ease-out]">50K+</div>
-                <div className="text-xl text-black font-medium group-hover:text-purple-800 transition-colors">Users</div>
+                <div className="text-5xl font-white text-white group-hover:text-purple-900 transition-colors animate-[countUp_2s_ease-out]">50K+</div>
+                <div className="text-xl text-white font-medium group-hover:text-purple-800 transition-colors">Users</div>
               </div>
               <div className="text-center group cursor-pointer transform hover:scale-110 transition-all duration-300">
-                <div className="text-5xl font-black text-black group-hover:text-purple-900 transition-colors animate-[countUp_2s_ease-out]" style={{ animationDelay: '0.2s' }}>98%</div>
-                <div className="text-xl text-black font-medium group-hover:text-purple-800 transition-colors">Success Rate</div>
+                <div className="text-5xl font-white text-white group-hover:text-purple-900 transition-colors animate-[countUp_2s_ease-out]" style={{ animationDelay: '0.2s' }}>98%</div>
+                <div className="text-xl text-white font-medium group-hover:text-purple-800 transition-colors">Success Rate</div>
               </div>
               <div className="text-center group cursor-pointer transform hover:scale-110 transition-all duration-300">
-                <div className="text-5xl font-black text-black group-hover:text-purple-900 transition-colors animate-[countUp_2s_ease-out]" style={{ animationDelay: '0.4s' }}>1000+</div>
-                <div className="text-xl text-black font-medium group-hover:text-purple-800 transition-colors">Questions</div>
+                <div className="text-5xl font-white text-white group-hover:text-purple-900 transition-colors animate-[countUp_2s_ease-out]" style={{ animationDelay: '0.4s' }}>1000+</div>
+                <div className="text-xl text-white font-medium group-hover:text-purple-800 transition-colors">Questions</div>
               </div>
             </div>
           </div>
