@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="min-h-screen w-full bg-gray-50 ">
       <Navbar />
-      <main className="w-full ">
+      <main className="w-full mt-20">
         <Routes>
           <Route path='/' element={<Home/>}/>
         </Routes>

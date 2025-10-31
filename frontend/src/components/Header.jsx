@@ -3,7 +3,7 @@ import assets from '../assets/assets.js'
 
 const Header = () => {
   return (
-    <div className="relative w-full min-h-screen lg:h-[80vh] bg-[#CFA0F0] overflow-hidden flex items-center">
+    <div className="relative w-full min-h-screen lg:h-[80vh] bg-[#CFA0F0] overflow-hidden flex items-center pt-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Floating Circles */}
