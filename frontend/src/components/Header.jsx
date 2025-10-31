@@ -2,6 +2,10 @@ import React from 'react'
 import assets from '../assets/assets.js'
 
 const Header = () => {
+
+  const {  a, b, c, d, e } = assets;
+
+
   return (
     <div className="relative w-full h-auto min-h-[90vh] md:h-[80vh] bg-white  overflow-hidden flex items-center pt-5">
       {/* Animated Background Elements */}
@@ -78,48 +82,84 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Right Side - Image & Cards */}
+          {/* Right Side - Image Gallery with Animations */}
           <div className="relative flex justify-center lg:justify-end animate-[slideInRight_1s_ease-out]">
-            <div className="relative w-full max-w-lg">
-              {/* Main Image Container */}
-              <div className="relative z-10 group">
-                <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border-4 border-white/50 hover:border-purple-300 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(139,92,246,0.3)] hover:scale-[1.02] transform">
+            <div className="relative w-full max-w-lg h-[500px]">
+              
+              {/* Center Main Image */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 group">
+                <div className="w-64 h-64 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-3xl shadow-2xl overflow-hidden border-4 border-white hover:border-purple-300 transition-all duration-500 hover:shadow-[0_25px_60px_rgba(139,92,246,0.4)] hover:scale-110 hover:rotate-3 transform">
                   <img 
-                    src={assets.img} 
-                    alt="AI Mock Interview" 
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                    src={a} 
+                    alt="Interview 1" 
+                    className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-6 transition-all duration-700"
                   />
                 </div>
               </div>
 
-              {/* Floating Card 1 - AI Analysis */}
-              <div className="absolute -left-6 top-20 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-purple-200 z-20 animate-bounce hover:scale-110 hover:shadow-2xl transition-all duration-300 cursor-pointer" style={{ animationDuration: '3s' }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center animate-pulse">
-                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {/* Floating Image 1 - Top Left */}
+              <div className="absolute top-0 left-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite' }}>
+                <div className="w-32 h-32 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-6 transition-all duration-500 cursor-pointer">
+                  <img 
+                    src={b} 
+                    alt="Interview 2" 
+                    className="w-full h-full object-cover hover:brightness-110 transition-all"
+                  />
+                </div>
+              </div>
+
+              {/* Floating Image 2 - Top Right */}
+              <div className="absolute top-8 right-4 z-20 animate-[float_5s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}>
+                <div className="w-28 h-28 rounded-full shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-12 transition-all duration-500 cursor-pointer">
+                  <img 
+                    src={c} 
+                    alt="Interview 3" 
+                    className="w-full h-full object-cover hover:brightness-110 transition-all"
+                  />
+                </div>
+              </div>
+
+              {/* Floating Image 3 - Bottom Left */}
+              <div className="absolute bottom-4 left-8 z-20 animate-[float_7s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 7s ease-in-out infinite', animationDelay: '2s' }}>
+                <div className="w-36 h-36 rounded-xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-6 transition-all duration-500 cursor-pointer bg-gradient-to-br from-blue-400 to-purple-500 p-1">
+                  <img 
+                    src={d} 
+                    alt="Interview 4" 
+                    className="w-full h-full object-cover rounded-lg hover:brightness-110 transition-all"
+                  />
+                </div>
+              </div>
+
+              {/* Floating Image 4 - Bottom Right */}
+              <div className="absolute bottom-8 right-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite', animationDelay: '3s' }}>
+                <div className="w-32 h-32 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-12 transition-all duration-500 cursor-pointer">
+                  <img 
+                    src={e} 
+                    alt="Interview 5" 
+                    className="w-full h-full object-cover hover:brightness-110 transition-all"
+                  />
+                </div>
+              </div>
+
+              {/* Floating Info Cards */}
+              {/* AI Analysis Card */}
+              <div className="absolute -left-6 top-20 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-purple-200 z-40 animate-bounce hover:scale-110 hover:shadow-2xl transition-all duration-300 cursor-pointer" style={{ animationDuration: '4s' }}>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center animate-pulse">
+                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="text-xs font-semibold text-gray-600">AI Analysis</div>
-                    <div className="text-sm font-bold text-gray-900 animate-pulse">95% Confident</div>
+                    <div className="text-xs font-bold text-gray-900">AI Score: 95%</div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Card 2 - Score */}
-              <div className="absolute -right-6 bottom-32 bg-gradient-to-br from-green-400 to-emerald-500 p-4 rounded-2xl shadow-xl z-20 animate-bounce hover:scale-125 hover:rotate-6 transition-all duration-300 cursor-pointer hover:shadow-2xl" style={{ animationDuration: '3s', animationDelay: '1s' }}>
+              {/* Score Badge */}
+              <div className="absolute -right-8 bottom-32 bg-gradient-to-br from-green-400 to-emerald-500 p-3 rounded-full shadow-xl z-40 animate-bounce hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer" style={{ animationDuration: '3s', animationDelay: '1s' }}>
                 <div className="text-center">
-                  <div className="text-3xl font-black text-white animate-[spin_3s_ease-in-out_infinite]">A+</div>
-                  <div className="text-xs font-semibold text-white/90">Great Answer!</div>
-                </div>
-              </div>
-
-              {/* Floating Card 3 - Questions */}
-              <div className="absolute -left-4 bottom-8 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-lg border border-purple-200 z-20 hover:scale-110 hover:shadow-xl transition-all duration-300 cursor-pointer animate-[slideInLeft_1.5s_ease-out]">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
-                  <span className="text-xs font-semibold text-gray-700">1,247 Practice Questions</span>
+                  <div className="text-2xl font-black text-white">A+</div>
                 </div>
               </div>
             </div>
