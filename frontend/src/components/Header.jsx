@@ -27,10 +27,10 @@ const Header = () => {
 
       {/* Main Content */}
       <div className="relative  z-10 max-w-8xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16 lg:px-20 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10">
           
           {/* Left Content */}
-          <div className="space-y-8 text-center lg:text-left animate-[fadeIn_1s_ease-in]">
+          <div className=" bg-green-200 space-y-8 text-center lg:text-left animate-[fadeIn_1s_ease-in]">
             {/* Badge with animation */}
             <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-[slideDown_0.8s_ease-out]">
               <span className="text-2xl animate-bounce" style={{ animationDuration: '2s' }}>🤖</span>
@@ -83,12 +83,12 @@ const Header = () => {
           </div>
 
           {/* Right Side - Image Gallery with Animations */}
-          <div className="relative flex justify-center lg:justify-end animate-[slideInRight_1s_ease-out]">
+          <div className=" bg-pink-200 relative flex justify-center lg:justify-center animate-[slideInRight_1s_ease-out]">
             <div className="relative w-full max-w-lg h-[500px]">
               
               {/* Center Main Image */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 group">
-                <div className="w-64 h-64 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-3xl shadow-2xl overflow-hidden border-4 border-white hover:border-purple-300 transition-all duration-500 hover:shadow-[0_25px_60px_rgba(139,92,246,0.4)] hover:scale-110 hover:rotate-3 transform">
+                <div className="w-80 h-80 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-3xl shadow-2xl overflow-hidden border-4 border-white hover:border-purple-300 transition-all duration-500 hover:shadow-[0_25px_60px_rgba(139,92,246,0.4)] hover:scale-110 hover:rotate-3 transform">
                   <img 
                     src={a} 
                     alt="Interview 1" 
@@ -99,7 +99,7 @@ const Header = () => {
 
               {/* Floating Image 1 - Top Left */}
               <div className="absolute top-0 left-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite' }}>
-                <div className="w-32 h-32 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-6 transition-all duration-500 cursor-pointer">
+                <div className="w-50 h-50 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-6 transition-all duration-500 cursor-pointer">
                   <img 
                     src={b} 
                     alt="Interview 2" 
@@ -110,7 +110,7 @@ const Header = () => {
 
               {/* Floating Image 2 - Top Right */}
               <div className="absolute top-8 right-4 z-20 animate-[float_5s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}>
-                <div className="w-28 h-28 rounded-full shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-12 transition-all duration-500 cursor-pointer">
+                <div className="w-50 h-50 rounded-full shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-12 transition-all duration-500 cursor-pointer">
                   <img 
                     src={c} 
                     alt="Interview 3" 
@@ -121,7 +121,7 @@ const Header = () => {
 
               {/* Floating Image 3 - Bottom Left */}
               <div className="absolute bottom-4 left-8 z-20 animate-[float_7s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 7s ease-in-out infinite', animationDelay: '2s' }}>
-                <div className="w-36 h-36 rounded-xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-6 transition-all duration-500 cursor-pointer bg-gradient-to-br from-blue-400 to-purple-500 p-1">
+                <div className="w-50 h-50 rounded-xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-6 transition-all duration-500 cursor-pointer bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                   <img 
                     src={d} 
                     alt="Interview 4" 
@@ -132,7 +132,7 @@ const Header = () => {
 
               {/* Floating Image 4 - Bottom Right */}
               <div className="absolute bottom-8 right-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite', animationDelay: '3s' }}>
-                <div className="w-32 h-32 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-12 transition-all duration-500 cursor-pointer">
+                <div className="w-50 h-50 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-12 transition-all duration-500 cursor-pointer">
                   <img 
                     src={e} 
                     alt="Interview 5" 
@@ -163,7 +163,12 @@ const Header = () => {
                 </div>
               </div>
             </div>
+         
+         
           </div>
+        
+        
+        
         </div>
       </div>
     </div>
