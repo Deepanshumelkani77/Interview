@@ -26,7 +26,7 @@ const Header = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative  z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16 w-full">
+      <div className="relative  z-10 max-w-8xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16 lg:px-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content */}
