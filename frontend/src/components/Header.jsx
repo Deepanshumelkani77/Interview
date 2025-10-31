@@ -7,7 +7,7 @@ const Header = () => {
 
 
   return (
-    <div className="relative w-full h-auto min-h-[90vh] md:h-[80vh] bg-black  overflow-hidden flex items-center pt-5">
+    <div className="relative w-full h-auto min-h-[90vh] md:h-[80vh] bg-zinc overflow-hidden flex items-center pt-5">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Floating Circles with different animations */}
