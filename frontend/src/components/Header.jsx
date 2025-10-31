@@ -3,7 +3,7 @@ import assets from '../assets/assets.js'
 
 const Header = () => {
   return (
-    <div className="relative w-full h-auto min-h-[90vh] md:h-[80vh] bg-[#CFA0F0] overflow-hidden flex items-center pt-5">
+    <div className="relative w-full h-auto min-h-[90vh] md:h-[80vh] bg-white  overflow-hidden flex items-center pt-5">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Floating Circles with different animations */}
@@ -22,7 +22,7 @@ const Header = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16 w-full">
+      <div className="relative  z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content */}
