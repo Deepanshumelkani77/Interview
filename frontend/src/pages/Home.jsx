@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import JobProfile from '../components/JobProfile'
+import Video from '../components/Video'
 
 const Home = () => {
   return (
@@ -105,7 +106,7 @@ const Home = () => {
         </div>
       </section>
 
-
+<Video />
 
       {/* How It Works Section */}
       <section className="bg-black py-20 px-4 sm:px-6 lg:px-20">

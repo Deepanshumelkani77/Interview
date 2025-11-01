@@ -20,6 +20,7 @@ import p11 from "./p11.png"
 import p12 from "./p12.png"
 import p13 from "./p13.png"
 import p14 from "./p14.png"
+import video from "./video.mp4"
 
 const assets = {
   img,
@@ -41,7 +42,8 @@ const assets = {
   p11,
   p12,
   p13,
-  p14
+  p14,
+  video
 }
 
 export default assets
