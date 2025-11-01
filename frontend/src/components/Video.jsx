@@ -45,7 +45,10 @@ const Video = () => {
               {video ? (
                 <video
                   className="w-full h-full object-cover"
-                  controls
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   poster=""
                 >
                   <source src={video} type="video/mp4" />
