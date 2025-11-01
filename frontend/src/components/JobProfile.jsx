@@ -60,7 +60,7 @@ const jobProfiles = [
                 <div key={`first-${profile.id}`} className="group relative flex-shrink-0 w-64 sm:w-72 md:w-80 mx-3 sm:mx-4">
                   <div className="relative bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-700 overflow-hidden hover:border-[#7415FD] transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20">
                     {/* Image */}
-                    <div className="aspect-[4/3] overflow-hidden bg-zinc-900">
+                    <div className="aspect-square overflow-hidden bg-zinc-900">
                       {profile.img && (
                         <img 
                           src={profile.img} 
@@ -70,19 +70,9 @@ const jobProfiles = [
                       )}
                     </div>
                     
-                    {/* Content */}
-                    <div className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <div 
-                          className="w-3 h-3 rounded-full animate-pulse" 
-                          style={{ backgroundColor: profile.color }}
-                        ></div>
-                        <span className="text-xs text-gray-400 uppercase tracking-wider">{profile.company}</span>
-                      </div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#7415FD] transition-colors duration-300">
-                        {profile.title}
-                      </h3>
-                      <button className="w-full px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#7415FD] to-purple-600 text-white rounded-xl text-sm sm:text-base font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-purple-500/50">
+                    {/* Button */}
+                    <div className="p-4">
+                      <button className="w-full px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-[#7415FD] to-purple-600 text-white rounded-xl text-sm sm:text-base font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-purple-500/50">
                         Start Practice →
                       </button>
                     </div>
@@ -98,7 +88,7 @@ const jobProfiles = [
                 <div key={`second-${profile.id}`} className="group relative flex-shrink-0 w-64 sm:w-72 md:w-80 mx-3 sm:mx-4">
                   <div className="relative bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-700 overflow-hidden hover:border-[#7415FD] transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20">
                     {/* Image */}
-                    <div className="aspect-[4/3] overflow-hidden bg-zinc-900">
+                    <div className="aspect-square overflow-hidden bg-zinc-900">
                       {profile.img && (
                         <img 
                           src={profile.img} 
@@ -108,19 +98,9 @@ const jobProfiles = [
                       )}
                     </div>
                     
-                    {/* Content */}
-                    <div className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <div 
-                          className="w-3 h-3 rounded-full animate-pulse" 
-                          style={{ backgroundColor: profile.color }}
-                        ></div>
-                        <span className="text-xs text-gray-400 uppercase tracking-wider">{profile.company}</span>
-                      </div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#7415FD] transition-colors duration-300">
-                        {profile.title}
-                      </h3>
-                      <button className="w-full px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#7415FD] to-purple-600 text-white rounded-xl text-sm sm:text-base font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-purple-500/50">
+                    {/* Button */}
+                    <div className="p-4">
+                      <button className="w-full px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-[#7415FD] to-purple-600 text-white rounded-xl text-sm sm:text-base font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-purple-500/50">
                         Start Practice →
                       </button>
                     </div>
