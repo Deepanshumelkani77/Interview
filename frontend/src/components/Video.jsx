@@ -25,7 +25,7 @@ const Video = () => {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 animate-fade-in">
             Watch Our
-            <span className="block mt-2 bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent">
+            <span className="block mt-2 text-[#00CC79]">
               Featured Video
             </span>
           </h2>
@@ -84,27 +84,7 @@ const Video = () => {
           </div>
         </div>
 
-        {/* Feature Cards Below Video */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 sm:mt-16">
-          {[
-            { icon: '🎬', title: 'HD Quality', desc: 'Crystal clear video quality' },
-            { icon: '⚡', title: 'Fast Streaming', desc: 'Buffer-free experience' },
-            { icon: '🎯', title: 'Engaging Content', desc: 'Curated for you' },
-          ].map((feature, index) => (
-            <div
-              key={index}
-              className="relative group"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
-              <div className="relative bg-gray-900/80 backdrop-blur-sm rounded-lg p-6 hover:bg-gray-900 transition duration-300">
-                <div className="text-4xl mb-3">{feature.icon}</div>
-                <h3 className="text-white font-semibold text-xl mb-2">{feature.title}</h3>
-                <p className="text-gray-400">{feature.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+       
       </div>
     </div>
   );
