@@ -173,7 +173,7 @@ const Home = () => {
       <JobProfile />
 
       {/* Testimonials Section */}
-      <section className="bg-black pb-10 px-4 sm:px-6 lg:px-20">
+      <section className="bg-black pb-20 px-4 sm:px-6 lg:px-20">
         <div className="max-w-8xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">

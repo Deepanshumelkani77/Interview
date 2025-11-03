@@ -10,14 +10,14 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+      <div className="relative z-10 max-w-8xl mx-auto px-4 lg:px-20 sm:px-6  pt-16 pb-8">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Mock<span className="text-[#00CC79]">Interview</span>
-              <span className="text-purple-500"> AI</span>
+              <span className="text-[#00CC79]">PrepNinja</span>
+              <span className="text-purple-500"> </span>
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Prepare for your dream job with AI-powered mock interviews. 
