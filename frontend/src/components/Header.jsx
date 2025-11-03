@@ -99,7 +99,7 @@ const Header = () => {
 
               {/* Floating Image 1 - Top Left */}
               <div className="absolute top-0 left-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite' }}>
-                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-6 transition-all duration-500 cursor-pointer">
+                <div className="w-35 h-35 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-6 transition-all duration-500 cursor-pointer">
                   <img 
                     src={b} 
                     alt="Interview 2" 
@@ -110,7 +110,7 @@ const Header = () => {
 
               {/* Floating Image 2 - Top Right */}
               <div className="absolute top-2 sm:top-8 right-0 sm:right-4 z-20 animate-[float_5s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}>
-                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-full shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-12 transition-all duration-500 cursor-pointer">
+                <div className="w-35 h-35 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-full shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-12 transition-all duration-500 cursor-pointer">
                   <img 
                     src={c} 
                     alt="Interview 3" 
@@ -121,7 +121,7 @@ const Header = () => {
 
               {/* Floating Image 3 - Bottom Left */}
               <div className="absolute bottom-0 sm:bottom-4 left-0 sm:left-8 z-20 animate-[float_7s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 7s ease-in-out infinite', animationDelay: '2s' }}>
-                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-6 transition-all duration-500 cursor-pointer bg-gradient-to-br from-blue-400 to-purple-500 p-1">
+                <div className="w-35 h-35 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-6 transition-all duration-500 cursor-pointer bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                   <img 
                     src={d} 
                     alt="Interview 4" 
@@ -132,7 +132,7 @@ const Header = () => {
 
               {/* Floating Image 4 - Bottom Right */}
               <div className="absolute bottom-4 sm:bottom-8 right-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite', animationDelay: '3s' }}>
-                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-12 transition-all duration-500 cursor-pointer">
+                <div className="w-35 h-35 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-12 transition-all duration-500 cursor-pointer">
                   <img 
                     src={e} 
                     alt="Interview 5" 
