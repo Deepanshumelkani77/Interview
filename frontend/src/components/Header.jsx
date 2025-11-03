@@ -83,12 +83,12 @@ const Header = () => {
           </div>
 
           {/* Right Side - Image Gallery with Animations */}
-          <div className=" relative flex justify-center lg:justify-center animate-[slideInRight_1s_ease-out]">
-            <div className=" relative w-[90%] h-[600px]">
+          <div className="relative flex justify-center lg:justify-center animate-[slideInRight_1s_ease-out] mt-8 lg:mt-0">
+            <div className="relative w-full max-w-[400px] lg:max-w-none lg:w-[90%] h-[400px] sm:h-[500px] lg:h-[600px]">
               
               {/* Center Main Image */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 group">
-                <div className="lg:w-80 lg:h-80 w-50 h-50 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-3xl shadow-2xl overflow-hidden border-4 border-white hover:border-purple-300 transition-all duration-500 hover:shadow-[0_25px_60px_rgba(139,92,246,0.4)] hover:scale-110 hover:rotate-3 transform">
+                <div className="w-48 h-48 sm:w-60 sm:h-60 lg:w-80 lg:h-80 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-3xl shadow-2xl overflow-hidden border-4 border-white hover:border-purple-300 transition-all duration-500 hover:shadow-[0_25px_60px_rgba(139,92,246,0.4)] hover:scale-110 hover:rotate-3 transform">
                   <img 
                     src={a} 
                     alt="Interview 1" 
@@ -99,7 +99,7 @@ const Header = () => {
 
               {/* Floating Image 1 - Top Left */}
               <div className="absolute top-0 left-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite' }}>
-                <div className="lg:w-60 lg:h-60 w-32 h-32 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-6 transition-all duration-500 cursor-pointer">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-6 transition-all duration-500 cursor-pointer">
                   <img 
                     src={b} 
                     alt="Interview 2" 
@@ -109,8 +109,8 @@ const Header = () => {
               </div>
 
               {/* Floating Image 2 - Top Right */}
-              <div className="absolute top-8 right-4 z-20 animate-[float_5s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}>
-                <div className="lg:w-60 lg:h-60 w-32 h-32 rounded-full shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-12 transition-all duration-500 cursor-pointer">
+              <div className="absolute top-2 sm:top-8 right-0 sm:right-4 z-20 animate-[float_5s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}>
+                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-full shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-12 transition-all duration-500 cursor-pointer">
                   <img 
                     src={c} 
                     alt="Interview 3" 
@@ -120,8 +120,8 @@ const Header = () => {
               </div>
 
               {/* Floating Image 3 - Bottom Left */}
-              <div className="absolute bottom-4 left-8 z-20 animate-[float_7s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 7s ease-in-out infinite', animationDelay: '2s' }}>
-                <div className="lg:w-60 lg:h-60 w-32 h-32 rounded-xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-6 transition-all duration-500 cursor-pointer bg-gradient-to-br from-blue-400 to-purple-500 p-1">
+              <div className="absolute bottom-0 sm:bottom-4 left-0 sm:left-8 z-20 animate-[float_7s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 7s ease-in-out infinite', animationDelay: '2s' }}>
+                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:rotate-6 transition-all duration-500 cursor-pointer bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                   <img 
                     src={d} 
                     alt="Interview 4" 
@@ -131,8 +131,8 @@ const Header = () => {
               </div>
 
               {/* Floating Image 4 - Bottom Right */}
-              <div className="absolute bottom-8 right-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite', animationDelay: '3s' }}>
-                <div className="lg:w-60 lg:h-60 w-32 h-32 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-12 transition-all duration-500 cursor-pointer">
+              <div className="absolute bottom-4 sm:bottom-8 right-0 z-20 animate-[float_6s_ease-in-out_infinite] hover:z-40" style={{ animation: 'float 6s ease-in-out infinite', animationDelay: '3s' }}>
+                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-60 lg:h-60 rounded-2xl shadow-xl overflow-hidden border-3 border-white/70 hover:scale-125 hover:-rotate-12 transition-all duration-500 cursor-pointer">
                   <img 
                     src={e} 
                     alt="Interview 5" 
@@ -142,8 +142,8 @@ const Header = () => {
               </div>
 
               {/* Floating Info Cards */}
-              {/* AI Analysis Card */}
-              <div className="absolute -left-6 top-20 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-purple-200 z-40 animate-bounce hover:scale-110 hover:shadow-2xl transition-all duration-300 cursor-pointer" style={{ animationDuration: '4s' }}>
+              {/* AI Analysis Card - Hidden on mobile */}
+              <div className="hidden lg:block absolute -left-6 top-20 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-purple-200 z-40 animate-bounce hover:scale-110 hover:shadow-2xl transition-all duration-300 cursor-pointer" style={{ animationDuration: '4s' }}>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center animate-pulse">
                     <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -156,8 +156,8 @@ const Header = () => {
                 </div>
               </div>
 
-              {/* Score Badge */}
-              <div className="absolute -right-8 bottom-32 bg-gradient-to-br from-green-400 to-emerald-500 p-3 rounded-full shadow-xl z-40 animate-bounce hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer" style={{ animationDuration: '3s', animationDelay: '1s' }}>
+              {/* Score Badge - Hidden on mobile */}
+              <div className="hidden lg:block absolute -right-8 bottom-32 bg-gradient-to-br from-green-400 to-emerald-500 p-3 rounded-full shadow-xl z-40 animate-bounce hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer" style={{ animationDuration: '3s', animationDelay: '1s' }}>
                 <div className="text-center">
                   <div className="text-2xl font-black text-white">A+</div>
                 </div>
