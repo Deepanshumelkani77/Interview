@@ -59,7 +59,7 @@ Return ONLY the question text, nothing else.`;
     if (USE_MOCK_MODE) {
       firstQuestion = getMockQuestion();
     } else {
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-09-2025" });
       const result = await model.generateContent(prompt);
       firstQuestion = result.response.text();
     }
@@ -121,7 +121,7 @@ FEEDBACK: [your feedback]`;
       const mockEval = getMockEvaluation();
       evaluationText = `SCORE: ${mockEval.score}\nFEEDBACK: ${mockEval.feedback}`;
     } else {
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-09-2025" });
       const result = await model.generateContent(evaluationPrompt);
       evaluationText = result.response.text();
     }
@@ -171,7 +171,7 @@ Return ONLY the question text, nothing else.`;
       if (USE_MOCK_MODE) {
         nextQuestion = getMockQuestion();
       } else {
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-09-2025" });
         const result = await model.generateContent(nextQuestionPrompt);
         nextQuestion = result.response.text();
       }
@@ -270,7 +270,7 @@ SUGGESTIONS:
 - Practice with more confidence
 - Research the company thoroughly`;
     } else {
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-09-2025" });
       const result = await model.generateContent(reportPrompt);
       reportText = result.response.text();
     }
