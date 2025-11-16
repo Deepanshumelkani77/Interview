@@ -14,8 +14,8 @@ const InterviewSession = () => {
   const {
     isListening,
     transcript,
-    interimTranscript,
     isSupported,
+    error,
     startListening,
     stopListening,
     resetTranscript
@@ -28,20 +28,18 @@ const InterviewSession = () => {
     }
   }, [interviewData.interviewId, navigate]);
 
-  // Update answer with transcript
-  useEffect(() => {
-    if (transcript) {
-      setAnswer(transcript);
-    }
-  }, [transcript]);
-
-  const handleVoiceToggle = () => {
+  const handleVoiceToggle = async () => {
     if (isListening) {
       stopListening();
     } else {
       resetTranscript();
       setAnswer('');
-      startListening();
+      try {
+        const userAnswer = await startListening();
+        setAnswer(userAnswer);
+      } catch (error) {
+        console.error('Voice input error:', error);
+      }
     }
   };
 
@@ -175,14 +173,22 @@ const InterviewSession = () => {
               {/* Voice Input */}
               {inputMode === 'voice' && (
                 <div className="space-y-4">
+                  {!isSupported && (
+                    <div className="p-4 bg-yellow-500/20 border border-yellow-500/50 rounded-lg">
+                      <p className="text-yellow-300 text-sm">
+                        ⚠️ Voice input is not supported in this browser. Please use Chrome, Edge, or Safari for the best experience.
+                      </p>
+                    </div>
+                  )}
                   <div className="flex justify-center">
                     <button
                       onClick={handleVoiceToggle}
+                      disabled={!isSupported}
                       className={`w-32 h-32 rounded-full flex items-center justify-center text-6xl transition-all transform ${
                         isListening
                           ? 'bg-red-500 animate-pulse scale-110 shadow-2xl shadow-red-500/50'
                           : 'bg-gradient-to-br from-purple-600 to-pink-600 hover:scale-110 shadow-xl'
-                      }`}
+                      } ${!isSupported ? 'opacity-50 cursor-not-allowed' : ''}`}
                     >
                       {isListening ? '⏸️' : '🎤'}
                     </button>
@@ -195,12 +201,21 @@ const InterviewSession = () => {
                   {/* Transcript Display */}
                   <div className="bg-black/30 rounded-xl p-6 min-h-[150px] border border-white/10">
                     <p className="text-white text-lg">
-                      {answer}
-                      <span className="text-gray-400">{interimTranscript}</span>
-                      {!answer && !interimTranscript && (
-                        <span className="text-gray-500">Your answer will appear here...</span>
-                      )}
+                      {answer || (!error && <span className="text-gray-500">Your answer will appear here...</span>)}
                     </p>
+                    {error && (
+                      <div className="mt-3 p-3 bg-red-500/20 border border-red-500/50 rounded-lg">
+                        <p className="text-red-300 text-sm mb-2">{error}</p>
+                        {error.includes('Network') && (
+                          <button
+                            onClick={handleVoiceToggle}
+                            className="px-3 py-1 bg-red-500 hover:bg-red-600 text-white text-sm rounded transition-colors"
+                          >
+                            Retry
+                          </button>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
