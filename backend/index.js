@@ -22,7 +22,8 @@ const connectDB = async () => {
     console.log("✅ Database connected successfully");
   } catch (error) {
     console.error("❌ Error connecting to database:", error);
-    process.exit(1);
+    console.log("⚠️  Server continuing without database connection");
+    // Don't exit the process, allow server to run without DB
   }
 };
 
@@ -49,5 +50,5 @@ app.use((err, req, res, next) => {
 // Start server
 app.listen(port, () => {
   console.log(`🚀 Server is running on port ${port}`);
-  console.log(`📍 API: http://localhost:${port}`);
+
 });
