@@ -1,5 +1,11 @@
 const Interview = require('../models/Interview');
-const openai = require('../config/openai');
+// Clear require cache to ensure fresh module load
+delete require.cache[require.resolve('../config/gemini')];
+const genAI = require('../config/gemini');
+const { getMockQuestion, getMockEvaluation, getMockReport } = require('./mockInterviewController');
+
+// Set to true to use mock responses (for testing without API quota)
+const USE_MOCK_MODE = false;
 
 // Job role to questions mapping - AI will generate contextual questions
 const jobRolePrompts = {
@@ -48,14 +54,15 @@ Generate the first interview question. The question should be:
 
 Return ONLY the question text, nothing else.`;
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0.7,
-      max_tokens: 200
-    });
-
-    const firstQuestion = completion.choices[0].message.content.trim();
+    let firstQuestion;
+    
+    if (USE_MOCK_MODE) {
+      firstQuestion = getMockQuestion();
+    } else {
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const result = await model.generateContent(prompt);
+      firstQuestion = result.response.text();
+    }
 
     res.json({
       success: true,
@@ -108,14 +115,16 @@ Format your response EXACTLY as:
 SCORE: [number]
 FEEDBACK: [your feedback]`;
 
-    const evaluation = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: evaluationPrompt }],
-      temperature: 0.7,
-      max_tokens: 300
-    });
-
-    const evaluationText = evaluation.choices[0].message.content.trim();
+    let evaluationText;
+    
+    if (USE_MOCK_MODE) {
+      const mockEval = getMockEvaluation();
+      evaluationText = `SCORE: ${mockEval.score}\nFEEDBACK: ${mockEval.feedback}`;
+    } else {
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const result = await model.generateContent(evaluationPrompt);
+      evaluationText = result.response.text();
+    }
     
     // Parse score and feedback
     const scoreMatch = evaluationText.match(/SCORE:\s*(\d+)/i);
@@ -159,14 +168,13 @@ Generate the next interview question. The question should:
 
 Return ONLY the question text, nothing else.`;
 
-      const nextCompletion = await openai.chat.completions.create({
-        model: "gpt-4o-mini",
-        messages: [{ role: "user", content: nextQuestionPrompt }],
-        temperature: 0.7,
-        max_tokens: 200
-      });
-
-      nextQuestion = nextCompletion.choices[0].message.content.trim();
+      if (USE_MOCK_MODE) {
+        nextQuestion = getMockQuestion();
+      } else {
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const result = await model.generateContent(nextQuestionPrompt);
+        nextQuestion = result.response.text();
+      }
     } else {
       // Interview complete
       interview.status = 'completed';
@@ -244,14 +252,28 @@ SUGGESTIONS:
 - [suggestion 2]
 - [suggestion 3]`;
 
-    const reportCompletion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: reportPrompt }],
-      temperature: 0.7,
-      max_tokens: 600
-    });
+    let reportText;
+    
+    if (USE_MOCK_MODE) {
+      const mockReport = getMockReport();
+      reportText = `STRENGTHS:
+- ${mockReport.strengths}
 
-    const reportText = reportCompletion.choices[0].message.content.trim();
+WEAKNESSES:
+- ${mockReport.weaknesses}
+
+VERDICT:
+${mockReport.verdict}
+
+SUGGESTIONS:
+- Focus on providing specific examples
+- Practice with more confidence
+- Research the company thoroughly`;
+    } else {
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const result = await model.generateContent(reportPrompt);
+      reportText = result.response.text();
+    }
 
     // Parse the report
     const strengthsMatch = reportText.match(/STRENGTHS:\s*([\s\S]*?)(?=WEAKNESSES:|$)/i);
