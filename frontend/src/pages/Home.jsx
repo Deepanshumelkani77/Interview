@@ -12,7 +12,7 @@ const Home = () => {
       <Header />
       
       {/* Hero Section with CTA */}
-      <section className="relative bg-black py-20 px-4 sm:px-6 lg:px-20 overflow-hidden">
+      <section className="relative bg-black py-10 px-4 sm:px-6 lg:px-20 overflow-hidden">
         {/* Animated background decorations */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-[#7415FD]/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
@@ -66,22 +66,7 @@ const Home = () => {
                 </span>
               </button>
             </div>
-            
-            {/* Quick Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto mt-16">
-              <div className="text-center">
-                <div className="text-3xl font-black text-[#00CC79] mb-2">10+</div>
-                <div className="text-gray-400 text-sm">Job Roles</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-black text-[#7415FD] mb-2">1000+</div>
-                <div className="text-gray-400 text-sm">AI Questions</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-black text-[#F447EF] mb-2">24/7</div>
-                <div className="text-gray-400 text-sm">Available</div>
-              </div>
-            </div>
+          
           </div>
         </div>
       </section>
@@ -185,74 +170,7 @@ const Home = () => {
 
 <Video />
 
-      {/* Secondary CTA Section */}
-      <section className="relative bg-gradient-to-r from-[#7415FD]/10 to-[#00CC79]/10 py-20 px-4 sm:px-6 lg:px-20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 left-20 w-32 h-32 bg-[#F447EF]/10 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '4s' }}></div>
-          <div className="absolute bottom-10 right-20 w-40 h-40 bg-[#00CC79]/10 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }}></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto relative z-10 text-center">
-          <div className="mb-8">
-            <span className="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white text-sm font-semibold tracking-wide animate-pulse">
-              🎯 READY TO START?
-            </span>
-          </div>
-          
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
-            Your Dream Job <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00CC79] to-green-400">Awaits</span>
-          </h2>
-          
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-12">
-            Don't let interviews stand in your way. Practice with AI, build confidence, and ace your next interview.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button
-              onClick={() => navigate('/interview-start')}
-              className="group px-10 py-5 bg-gradient-to-r from-[#7415FD] to-purple-600 hover:from-[#7415FD]/90 hover:to-purple-600/90 text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
-            >
-              <span className="flex items-center gap-3">
-                🎤 Start Practice Interview
-                <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </span>
-            </button>
-            
-            <button
-              onClick={() => navigate('/interview-start')}
-              className="group px-10 py-5 bg-gradient-to-r from-[#00CC79] to-green-600 hover:from-[#00CC79]/90 hover:to-green-600/90 text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
-            >
-              <span className="flex items-center gap-3">
-                💼 Explore Job Roles
-                <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
-          </div>
-          
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl mb-2">⏱️</div>
-              <h4 className="text-white font-bold mb-1">5 Minutes</h4>
-              <p className="text-gray-400 text-sm">Quick practice sessions</p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl mb-2">🎯</div>
-              <h4 className="text-white font-bold mb-1">Targeted</h4>
-              <p className="text-gray-400 text-sm">Role-specific questions</p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl mb-2">📈</div>
-              <h4 className="text-white font-bold mb-1">Track Progress</h4>
-              <p className="text-gray-400 text-sm">Improve over time</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+   
       {/* How It Works Section */}
       <section className="bg-black py-20 px-4 sm:px-6 lg:px-20">
         <div className="max-w-8xl mx-auto">
