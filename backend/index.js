@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 // Database connection
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://deepumelkani123_db_user:PrepNinja@cluster0.rxrktri.mongodb.net/?appName=Cluster0");
+    await mongoose.connect( "mongodb+srv://deepumelkani123_db_user:PrepNinja@cluster0.rxrktri.mongodb.net/?appName=Cluster0");
     console.log("✅ Database connected successfully");
   } catch (error) {
     console.error("❌ Error connecting to database:", error);
