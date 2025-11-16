@@ -25,7 +25,7 @@ const Video = () => {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 animate-fade-in">
             Watch Our
-            <span className="block mt-2 text-[#00CC79]">
+            <span className="block mt-2 ">
               Featured Video
             </span>
           </h2>
